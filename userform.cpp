@@ -1,11 +1,13 @@
 #include "userform.h"
 #include "ui_userform.h"
 
-UserForm::UserForm(QWidget *parent) :
+UserForm::UserForm(const QString& name, QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::UserForm)
+    ui(new Ui::UserForm),
+    name(name)
 {
     ui->setupUi(this);
+    ui->username->setText(name);
 }
 
 UserForm::~UserForm()

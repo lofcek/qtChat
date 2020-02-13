@@ -15,12 +15,12 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="username">
+     <property name="styleSheet">
+      <string notr="true">color: blue; font: bold</string>
+     </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-
-&lt;p  style=&quot;color:blue;font-weight:bold&quot;&gt;Username&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;</string>
+      <string>Username</string>
      </property>
     </widget>
    </item>
@@ -46,7 +46,11 @@
     </layout>
    </item>
    <item>
-    <widget class="QTextBrowser" name="textBrowser"/>
+    <widget class="QTextBrowser" name="textBrowser">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -17,15 +17,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
+    mainform.cpp \
     userform.cpp
 
 HEADERS += \
-    mainwindow.h \
+    mainform.h \
     userform.h
 
 FORMS += \
-    mainwindow.ui \
+    mainform.ui \
     userform.ui
 
 # Default rules for deployment.
