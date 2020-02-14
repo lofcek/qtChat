@@ -12,12 +12,19 @@ class UserForm : public QWidget
     Q_OBJECT
 
 public:
-    explicit UserForm(const QString& name, QWidget *parent = nullptr);
+    UserForm(QColor color, QString name, QWidget *parent = nullptr);
     ~UserForm();
+
+signals:
+    void send(QColor color, QString author, QString msg);
+
+public slots:
+    void addText(QColor color, QString author, QString msg);
 
 private:
     Ui::UserForm *ui;
     QString name;
+    QColor color;
 };
 
 #endif // USERFORM_H

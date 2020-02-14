@@ -1,3 +1,4 @@
+#include <QDebug>
 #include "ui_mainform.h"
 #include "mainform.h"
 #include "userform.h"
@@ -8,11 +9,16 @@ MainForm::MainForm(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    auto user1 = new UserForm(GetCurrentUsername());
+    auto user1 = new UserForm(Qt::red, GetCurrentUsername());
     ui->verticalLayout->addWidget(user1);
 
-    auto user2 = new UserForm("Coding Challenge");
+    auto user2 = new UserForm(Qt::blue, "Coding Challenge");
     ui->verticalLayout->addWidget(user2);
+
+
+    connect(user1, &UserForm::send, user2, &UserForm::addText);
+    connect(user2, &UserForm::send, user1, &UserForm::addText);
+    // connect send and addText of the same UserForm is done in ui
 }
 
 MainForm::~MainForm()
